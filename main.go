@@ -37,5 +37,8 @@ func main() {
 		log.Fatal("Error inserting data to table students: ", err)
 	}
 
-	// fetchFromDb(name,rollno,branch)
+	err = database.FetchDetails(db, "Hellen")
+	if err != nil {
+		log.Fatal("Error fetching details from database: ", err)
+	}
 }
